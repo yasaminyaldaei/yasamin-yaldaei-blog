@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -29,6 +30,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.yasaminyaldaei.com`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
