@@ -1,231 +1,37 @@
 ---
 title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+date: "2021-05-04T11:04:24.423Z"
+description: "Hello (Blogging) World"
 ---
 
-This is my first post on my new fake blog! How exciting!
+Welcome to my blog! This is kinda my first post. (But not actually, stay tuned!) I'm Yasamin, a Front-end developer disguised as a Mobile app developer for professional reasons. 😁
 
-I'm sure I'll write a lot more interesting things in the future.
+I decided to write this post as a starting point for this blog and introduce it a bit.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
+## What will you find in this blog?
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+Well, I have tons of ideas I would love to write about. But for now, the content will be around React/React Native development. Articles such as tutorials and how-tos. And maybe sometimes some vanilla JavaScript techniques and gotchas.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+But who knows? Maybe I will learn new languages and technologies in the future, and include those here as well! I would be thrilled to share all of my technical passions here with you all!
 
-You can also write code blocks here!
+### Development and nothing else?!
 
-```js
-const saltyDuckEgg = "chinese preserved food product"
-```
+No, I can't promise everything would be about technical and hard skills all the way around. I'm an avid fan of routines and habits in my professional and personal life. So every once in a while I may write about the techniques I use to achieve a productive and happy life. (Which are two interchangeable terms for me!).
 
-| Number | Title                                    | Year |
-| :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
+And maybe sometimes I will write about soft skills at work if I find out I've got something to say in these matters as well.
 
-[View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
+## How is this blog made?
 
-This is a paragraph.
+This blog is created using the amazing [Gatsby](https://www.gatsbyjs.com/)! And in particular, I have used [this](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) starter template to bootstrap my process. Which I found to be super helpful in getting up and ready with just a few customizations. I just spent an hour or two substituting the placeholder information with my real data and I'm ready to go! (hail JS community!).
 
-    This is a paragraph.
+Aside from the info substitution, for now, I just added [this](https://www.gatsbyjs.com/plugins/gatsby-plugin-canonical-urls/) plugin to add canonical URLs for my posts. Since I'm planning to publish my posts on other platforms as well for now.
 
-# Header 1
+All the code and content of this blog lies in [this](https://github.com/yasaminyaldaei/yasamin-yaldaei-blog) public Github repo.
 
-## Header 2
+And last but not least, I'm using [Netlify](https://www.netlify.com/) to deploy the website.
 
-    Header 1
-    ========
+## Final Words
 
-    Header 2
-    --------
+I have plans to regularly post on this blog. But since it's a really hard and time-consuming job for me as a full-time developer and a blogging newbie, I only aim to blog once a month for the time being.
 
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1 #
-    ## Header 2 ##
-    ### Header 3 ###
-    #### Header 4 ####
-    ##### Header 5 #####
-    ###### Header 6 ######
-
-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-    > Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-> ## This is a header.
->
-> 1. This is the first list item.
-> 2. This is the second list item.
->
-> Here's some example code:
->
->     Markdown.generate();
-
-    > ## This is a header.
-    > 1. This is the first list item.
-    > 2. This is the second list item.
-    >
-    > Here's some example code:
-    >
-    >     Markdown.generate();
-
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-
-```markdown
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-```
-
-- `code goes` here in this line
-- **bold** goes here
-
-```markdown
-- `code goes` here in this line
-- **bold** goes here
-```
-
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-
-```markdown
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-```
-
-1. `code goes` here in this line
-1. **bold** goes here
-
-```markdown
-1. `code goes` here in this line
-1. **bold** goes here
-```
-
-Paragraph:
-
-    Code
-
-<!-- -->
-
-    Paragraph:
-
-        Code
-
----
-
----
-
----
-
----
-
----
-
-    * * *
-
-    ***
-
-    *****
-
-    - - -
-
-    ---------------------------------------
-
-This is [an example](http://example.com "Example") link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example][id] reference-style link.
-
-[id]: http://example.com "Optional Title"
-
-    This is [an example](http://example.com "Example") link.
-
-    [This link](http://example.com) has no title attr.
-
-    This is [an example] [id] reference-style link.
-
-    [id]: http://example.com "Optional Title"
-
-_single asterisks_
-
-_single underscores_
-
-**double asterisks**
-
-**double underscores**
-
-    *single asterisks*
-
-    _single underscores_
-
-    **double asterisks**
-
-    __double underscores__
-
-This paragraph has some `code` in it.
-
-    This paragraph has some `code` in it.
-
-![Alt Text](https://placehold.it/200x50 "Image Title")
-
-    ![Alt Text](https://placehold.it/200x50 "Image Title")
+I'm working on my actual first blog post and it will be published soon. It's a tutorial on a React Native animation effect using both standard React Native `Animated` API and the new and fancy Reanimated v2 API.
