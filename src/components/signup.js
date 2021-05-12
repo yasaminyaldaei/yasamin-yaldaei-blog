@@ -3,25 +3,27 @@ import React from "react"
 import "./signup.css"
 
 const FORM_ID = "2269341"
+const FORM_UID = "a79b295350"
 
 class Signup extends React.Component {
   render() {
     let form = {
       id: FORM_ID,
+      uid: FORM_UID,
       title: "Join the Newsletter",
-      subTitle: "Subscribe to get my blog's latest content by email.",
+      subTitle: "Subscribe to get my latest content by email.",
       buttonText: "Subscribe",
-      buttonColor: "rgb(55, 0, 179)",
-      subText: "I won't send you spam. Unsubscribe at any time.",
+      buttonColor: "#ad67eb",
+      subText: "No spams. Unsubscribe at any time.",
     }
     return (
       <form
         action={`https://app.convertkit.com/forms/${form.id}/subscriptions`}
-        style={{ backgroundColor: "rgb(249, 250, 251)", borderRadius: 4 }}
+        style={{ backgroundColor: "rgb(249, 250, 251)", borderRadius: 25 }}
         className="seva-form formkit-form"
         method="post"
         data-sv-form={form.id}
-        data-uid="de1eed4248"
+        data-uid={form.uid}
         data-format="inline"
         data-version={5}
         data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://convertkit.com?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
@@ -60,7 +62,7 @@ class Signup extends React.Component {
                 style={{
                   color: "rgb(0, 0, 0)",
                   borderColor: "rgb(227, 227, 227)",
-                  borderRadius: 4,
+                  borderRadius: 25,
                   fontWeight: 400,
                 }}
                 name="fields[first_name]"
@@ -75,7 +77,7 @@ class Signup extends React.Component {
                 style={{
                   color: "rgb(0, 0, 0)",
                   borderColor: "rgb(227, 227, 227)",
-                  borderRadius: 4,
+                  borderRadius: 25,
                   fontWeight: 400,
                 }}
                 aria-label="Email Address"
@@ -90,7 +92,7 @@ class Signup extends React.Component {
               style={{
                 color: "rgb(255, 255, 255)",
                 backgroundColor: form.buttonColor,
-                borderRadius: 4,
+                borderRadius: 25,
                 fontWeight: 700,
               }}
             >
