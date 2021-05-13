@@ -102,7 +102,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
+  margin-top: var(--spacing-6);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
@@ -330,4 +330,42 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+.modal {
+  @apply flex items-center justify-center fixed top-0 w-full h-full bg-gray-500 bg-opacity-50;
+}
+
+.modal-bar {
+  @apply flex flex-row-reverse justify-between items-center pt-3 pr-3;
+}
+
+.modal-container {
+  @apply mx-auto my-2 w-80 max-w-screen-md bg-gray-600 border-2 border-gray-800 border-opacity-25 rounded-2xl;
+}
+
+.modal-content-container {
+  @apply flex flex-col p-8 items-center justify-center;
+}
+
+.modal-header {
+  @apply mb-10 text-white;
+}
+
+.modal-content {
+  @apply text-center text-white mb-10;
+}
+
+.modal-button-container {
+  @apply w-full;
+}
+
+.modal-button {
+  background-color: var(--color-primary);
+  font-family: var(--fontFamily-sans);
+  @apply opacity-90 hover:opacity-100 text-white font-bold py-2 px-4 rounded-2xl border-none w-full;
+}
+
+.modal-close {
+  @apply bg-transparent border-none text-white text-3xl;
 }
