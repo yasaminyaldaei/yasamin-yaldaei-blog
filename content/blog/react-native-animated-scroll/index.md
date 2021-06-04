@@ -8,13 +8,13 @@ Here we're going to build an animated header that **disappears when the user scr
 
 ![Collapsible Header with Sticky Bar](./react-native-collapsible-header.gif)
 
-This is a pretty standard and commonly used effect in mobile apps.
+This effect is pretty standard and commonly used in mobile apps.
 
 Without further ado, let's start the tutorial:
 
 ## Container Component
 
-Here we will go with a classic approach. Which is to **put the header component out of the scroll container and position it with `absolute` style property.**
+Here we will go with a classic approach. **Putting the header component out of the scroll container and position it with `absolute` style property.**
 
 This will cause an overlap between the header and scrollable content. So the `Animated.ScrollView` will need a:
 
@@ -56,6 +56,8 @@ Which `scrollY` is an `Animated` value defined at the top of the container compo
 this.scrollY = new Animated.Value(0)
 ```
 
+_You can check out the completed container component [here](https://gist.github.com/yasaminyaldaei/7ceef4ad185065b1a796ab1f19ac0f17#file-home-js)._
+
 ## Collapsible Header Component
 
 Our `CollapsibleHeader` component will need to know about the scroll value to work. Therefore we will add this prop to the component which is in the container component:
@@ -81,19 +83,19 @@ onLayout = ({
 }
 ```
 
-First, this function will be passed as a prop to the wrapper `Animated.View` component. Which is used to navigate the animated transformation while scrolling the content.
+First, we will pass this function as a prop to the wrapper `Animated.View` component, which navigates the animated transformation while scrolling the content.
 
 Next, we're fetching the height of the header component and putting it in the state to use later for transformation.
 
 ### `diffClamp` function
 
-Now one of the crucial steps of achieving our desired animated effect comes to play: The `diffClamp`.
+Now, One of the crucial steps of achieving our desired animated effect comes to play: The `diffClamp`.
 
 To understand what does this `Animated` function does, let's start with clamping itself.
 
 #### Clamping
 
-> In computer graphics, **clamping** is the process of limiting a position to an area. In general, clamping is used to restrict a value to a given range.
+> In computer graphics, **clamping** is the process of limiting a position to an area. In general, we use clamping to restrict a value to a given range.
 > _Wikipedia_
 
 The pseudocode for clamping is more intuitive to understand:
@@ -109,13 +111,13 @@ function clamp(x, min, max):
 
 In our case, `x` would be the `scrollY` value, obviously. But this simple clamping **is not enough**.
 
-This would just limit the exact `scrollY` value. It would've been desirable if we only wanted to display the header on the top of the page. And then hide it when the user scrolls past the header height.
+This function would only limit the exact `scrollY` value. It would've been desirable to only display the header on the top of the page. And then hide it when the user scrolls past the header height.
 
 But what we want is to **reappear the header when the user drags downwards and goes up on the list.**
 
 In a way, we can say **we don't care about the raw `scrollY` value. We care about how much it's changed compared to a moment ago.**
 
-This is what `diffClamp` does for us. **This function internally subtracts the two continuous `scrollY` values and feeds them to the clamp function.** So this way, we will always have a value between `0` and `headerHeight` no matter where on the list.
+This functionality is what `diffClamp` does for us. **This function internally subtracts the two continuous `scrollY` values and feeds them to the clamp function.** So this way, we will always have a value between `0` and `headerHeight` no matter where on the list.
 
 #### How to calculate the `diffClamp`?
 
@@ -140,7 +142,7 @@ componentDidUpdate() {
 
 So let's see what's going on here. Shall we?
 
-We set the `min` value equal to `0`. Because we want the calculations to start at the top of the list when no motion is made yet. And **we stop the range when the user scrolls about the height of the header.** Since we want to display the sticky bar all the way around, **we're subtracting the height of the bar here.**
+We set the `min` value equal to `0`. We want the calculations to start at the top of the list when the user has made no motion yet. And **we stop the range when the user scrolls about the height of the header.** Since we want to display the sticky bar all the way around, **we're subtracting the height of the bar here.**
 
 #### Fetch `stickyBarHeight` in the `CollpsibleHeader` component
 
@@ -152,15 +154,15 @@ _Another approach would be calling the `setStickyHeight` method in the `Componen
 
 ### Rendering the animated header
 
-_Phew!_ And clamping is done! Let's move forward to actually using what we've calculated. Now we're in the `render` method finally!
+_Phew!_ And we're done with clamping! So let's move forward to using what we've calculated. Now we're in the `render` method finally!
 
-**We're going to change the `translateY` value of the wrapper `View`. Meaning, Moving it upward and downward.**
+**We're going to change the `translateY` value of the wrapper `View`. Meaning moving it upward and downward.**
 
-To move it out of the view, we need negative `translateY` value equal to the `layoutHeight - stickyHeight`. And vice verca to display it again.
+We need a negative `translateY` value equal to the `layoutHeight - stickyHeight` to move it out of the view. And vice versa to display it again.
 
 The relationship between the `clampedScroll` and the `translateY` is equal but reverse in direction.
 
-So we just need to reverse the calculated clamped scroll value. Since we want to hide the header when the user scrolls down, (Thus the `scrollY` value increases). And we want to display the header as soon as the user scrolls up. (therefore decreasing the `scrollY` value).
+So we just need to reverse the calculated clamped scroll value. Since we want to hide the header when the user scrolls down, (Thus, the `scrollY` value increases). And we want to display the header as soon as the user scrolls up. (therefore decreasing the `scrollY` value).
 
 And this is how it's done:
 
@@ -201,9 +203,11 @@ container: {
   },
 ```
 
+_You can check out the completed collapsible header component [here](https://gist.github.com/yasaminyaldaei/7ceef4ad185065b1a796ab1f19ac0f17#file-collapsibleheader-js)._
+
 ## Sticky Bar Component
 
-Now we're in the final step, which is writing the sticky bar component. This is an elementary component just to demonstrate the effect.
+Now we're in the final step, which is writing the sticky bar component. Again, this component is an elementary one just to demonstrate the effect.
 In our case, this component will be the child of `<CollapsibleHeader>` component. As such:
 
 ```js
@@ -226,7 +230,7 @@ onStickyHeaderLayout = stickyHeaderHeight => {
 }
 ```
 
-In the second section, we've talked about the `setStickyHeight` function of the `<CollapsibleHeader>` and why we need it.
+In the second section, we've discussed the `setStickyHeight` function of the `<CollapsibleHeader>` and why we need it.
 
 To have the height, the main wrapper of the `<TabBar>` component needs an `onLayout` function which follows the same patterns:
 
@@ -241,10 +245,12 @@ onViewLayout = ({
 }
 ```
 
-## And finally...
+_You can check out the completed tab bar component [here](https://gist.github.com/yasaminyaldaei/7ceef4ad185065b1a796ab1f19ac0f17#file-tabbar-js)._
+
+## And finally
 
 We're good. We should have a smooth appearing/disappearing animation effect on our header component using the `Animated` API.
 
-In the next post, we will create the same effect but with a set of whole new tools! We will reqrite the components as function components. We will some custom hooks. And above all, **we will use the new and fancy Reanimated V2!**. Also this time we will use the `interpolate` approach.
+In the next post, we will create the same effect with a set of whole new tools! First, we will rewrite the components as Function components. Then, we will use some custom hooks. And above all, **we will use the new and fancy Reanimated V2!**. Also, this time we will use the `interpolate` approach.
 
 So if you've liked this one and are interested in the above topics, make sure to subscribe to my newsletter down here to be notified when the next post is shipped!
