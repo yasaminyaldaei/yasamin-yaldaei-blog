@@ -93,6 +93,12 @@ hr {
   border: 0;
 }
 
+p img {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
 /* Heading */
 
 h1,

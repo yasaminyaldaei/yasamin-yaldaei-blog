@@ -6,7 +6,7 @@ description: "Create a collapsible header with a sticky bar on top of a scrollab
 
 Here we're going to build an animated header that **disappears when the user scrolls down the list and reappears when the user scrolls back upwards.** Also, the header will have a **sticky bar** that will be there all the way around, no matter where the user is in the vertical list.
 
-
+![Collapsible Header with Sticky Bar](./react-native-collapsible-header.gif)
 
 This is a pretty standard and commonly used effect in mobile apps.
 
