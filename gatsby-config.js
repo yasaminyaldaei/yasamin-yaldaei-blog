@@ -133,6 +133,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-gitalk`,
+      options: {
+        config: {
+          clientID: `${process.env.githubCliendId}`,
+          clientSecret: `${process.env.githubCliendSecret}`,
+          repo: "yasamin-yaldaei-blog",
+          owner: "yasaminyaldaei",
+          admin: ["yasaminyaldaei"],
+          perPage: 50,
+          labels: ["Comment"],
+        },
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
