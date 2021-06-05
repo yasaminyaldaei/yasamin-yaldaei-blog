@@ -93,10 +93,11 @@ hr {
   border: 0;
 }
 
-p img {
-  display: flex;
-  justify-self: center;
-  align-self: center;
+figcaption {
+  margin-top: var(--spacing-2);
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
 }
 
 /* Heading */

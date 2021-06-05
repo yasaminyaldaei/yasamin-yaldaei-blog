@@ -2,6 +2,9 @@
 title: Collapsible header using the React Native Animated API
 date: "2021-06-04T14:02:17.336Z"
 description: "Create a collapsible header with a sticky bar on top of a scrollable list using the class components."
+featuredImage: featured-image.jpg
+attribute: Photo by <a href="https://unsplash.com/@glvrdru?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maxim Ilyahov</a> on <a href="https://unsplash.com/s/photos/phone-scroll?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 ---
 
 Here we're going to build an animated header that **disappears when the user scrolls down the list and reappears when the user scrolls back upwards.** Also, the header will have a **sticky bar** that will be there all the way around, no matter where the user is in the vertical list.
