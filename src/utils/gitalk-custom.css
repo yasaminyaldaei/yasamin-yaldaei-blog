@@ -10,6 +10,11 @@
 .gt-container .gt-btn-public {
   background-color: #ad67eb;
 }
+.gt-btn .gt-btn-preview {
+  background-color: #fff;
+  color: #ad67eb;
+  border-color: #ad67eb;
+}
 .gt-container .gt-btn {
   border: 1px solid #ad67eb;
   background-color: #ad67eb;
@@ -28,8 +33,3 @@
   border-color: #ad67eb;
 }
 
-.gt-btn-preview {
-  background-color: #fff;
-  color: #ad67eb;
-  border-color: #ad67eb;
-}
