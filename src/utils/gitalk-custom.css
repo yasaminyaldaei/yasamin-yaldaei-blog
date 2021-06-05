@@ -28,8 +28,8 @@
   border-color: #ad67eb;
 }
 
-button.gt-btn.gt-btn-public:hover {
-  background-color: #ad67eb;
+button.gt-btn.gt-btn-preview {
+  background-color: #ffffff;
 }
 
 button.gt-btn.gt-btn-preview:hover {
