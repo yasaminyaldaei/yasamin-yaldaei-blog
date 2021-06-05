@@ -251,7 +251,9 @@ _You can check out the completed tab bar component [here](https://gist.github.co
 
 ## And finally
 
-We're good. We should have a smooth appearing/disappearing animation effect on our header component using the `Animated` API.
+We're good. We should have a smooth appearing/disappearing animation effect on our header component using the `Animated` API. 
+
+What do you think of this method to have a **_collapsible header component with a sticky bar_**? Let me know in the comments below!
 
 In the next post, we will create the same effect with a set of whole new tools! First, we will rewrite the components as Function components. Then, we will use some custom hooks. And above all, **we will use the new and fancy Reanimated V2!**. Also, this time we will use the `interpolate` approach.
 
