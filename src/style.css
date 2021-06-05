@@ -93,10 +93,11 @@ hr {
   border: 0;
 }
 
-p img {
-  display: flex;
-  justify-self: center;
-  align-self: center;
+figcaption {
+  margin-top: var(--spacing-2);
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
 }
 
 /* Heading */
@@ -374,4 +375,11 @@ a:focus {
 
 .modal-close {
   @apply bg-transparent border-none text-white text-3xl;
+}
+
+.gatsby-img-attributes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

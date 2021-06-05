@@ -9,7 +9,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Signup from "../components/signup"
-
+import Img from "gatsby-image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -20,6 +20,7 @@ const BlogPostTemplate = ({ data, location }) => {
     id: post.slug || post.id,
     title: post.frontmatter.title,
   }
+  let featuredImgFluid = post.frontmatter?.featuredImage?.childImageSharp.fluid
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -35,6 +36,12 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <figure>
+            <Img fluid={featuredImgFluid} />
+            <figcaption
+              dangerouslySetInnerHTML={{ __html: post.frontmatter.attribute }}
+            ></figcaption>
+          </figure>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -98,6 +105,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        attribute
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
