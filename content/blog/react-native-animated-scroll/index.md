@@ -8,7 +8,7 @@ attribute: Photo by <a href="https://unsplash.com/@glvrdru?utm_source=unsplash&u
 
 Here we're going to build an animated header that **disappears when the user scrolls down the list and reappears when the user scrolls back upwards.** Also, the header will have a **sticky bar** that will be there all the way around, no matter where the user is in the vertical list.
 
-![Collapsible Header with Sticky Bar](./react-native-collapsible-header.gif#border-radius=40px;)
+![Collapsible Header with Sticky Bar](./react-native-collapsible-header.gif#border-radius=2rem;)
 
 This effect is pretty standard and commonly used in mobile apps.
 
