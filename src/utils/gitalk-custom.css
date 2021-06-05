@@ -7,12 +7,11 @@
 .gt-container .gt-link {
   border-bottom: 1px dotted #ad67eb;
 }
-.gt-container .gt-btn-public {
+.gt-container .gt-btn-public, .gt-container .gt-btn {
   background-color: #ad67eb;
 }
 .gt-container .gt-btn {
   border: 1px solid #ad67eb;
-  background-color: #ad67eb;
 }
 .gt-container .gt-btn-public:hover {
   border-color: #ad67eb;
