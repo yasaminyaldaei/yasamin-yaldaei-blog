@@ -4,7 +4,6 @@ import Gitalk from "gatsby-plugin-gitalk"
 import "@suziwen/gitalk/dist/gitalk.css"
 import "../utils/gitalk-custom.css"
 
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -50,10 +49,10 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
         <footer>
           <Bio />
+          <Gitalk options={gitalkConfig} />
           <Signup />
         </footer>
       </article>
-      <Gitalk options={gitalkConfig} />
       <nav className="blog-post-nav">
         <ul
           style={{
