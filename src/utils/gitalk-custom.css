@@ -29,10 +29,7 @@
 }
 
 .gt-btn-preview {
-  color: #fff;
-}
-
-.gt-btn-preview:hover {
-  border-color: #ad67eb;
+  background-color: #fff;
   color: #ad67eb;
+  border-color: #ad67eb;
 }
