@@ -1,0 +1,29 @@
+.gt-container .gt-header-controls-tip,
+.gt-container .gt-btn-preview,
+.gt-container a,
+.gt-container .gt-comment-username {
+  color: #ad67eb;
+}
+.gt-container .gt-link {
+  border-bottom: 1px dotted #ad67eb;
+}
+.gt-container .gt-btn-public {
+  background-color: #ad67eb;
+}
+.gt-container .gt-btn {
+  border: 1px solid #ad67eb;
+  background-color: #ad67eb;
+}
+.gt-container .gt-btn-public:hover {
+  border-color: #ad67eb;
+  background-color: #ad67eb;
+}
+.gt-container .gt-svg svg {
+  fill: #ad67eb;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  background: #ad67eb;
+}
+.gt-container a:hover {
+  border-color: #ad67eb;
+}
