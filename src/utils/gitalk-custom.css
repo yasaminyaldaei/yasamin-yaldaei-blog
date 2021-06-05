@@ -27,3 +27,12 @@
 .gt-container a:hover {
   border-color: #ad67eb;
 }
+
+.gt-btn-preview {
+  color: #fff;
+}
+
+.gt-btn-preview:hover {
+  border-color: #ad67eb;
+  color: #ad67eb;
+}
